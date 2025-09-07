@@ -1,0 +1,40 @@
+;;; 
+Export: Release 23.0.0.0.0 - Production on Dom Sep 7 18:44:43 2025
+Version 23.9.0.25.07
+
+Copyright (c) 1982, 2025, Oracle and/or its affiliates.  All rights reserved.
+;;; 
+Conectado a: Oracle Database 23ai Free Release 23.0.0.0.0 - Develop, Learn, and Run for Free
+Iniciando "C##USUARIOPC1"."SYS_EXPORT_SCHEMA_01":  C##usuariopc1/********@FREE schemas=C##usuariopc1 directory=BACKUPP dumpfile=backup_esquema.dmp logfile=backup_esquema.log 
+Procesando el tipo de objeto SCHEMA_EXPORT/TABLE/TABLE_DATA
+Procesando el tipo de objeto SCHEMA_EXPORT/TABLE/INDEX/STATISTICS/INDEX_STATISTICS
+Procesando el tipo de objeto SCHEMA_EXPORT/TABLE/STATISTICS/TABLE_STATISTICS
+Procesando el tipo de objeto SCHEMA_EXPORT/USER
+Procesando el tipo de objeto SCHEMA_EXPORT/SYSTEM_GRANT
+Procesando el tipo de objeto SCHEMA_EXPORT/ROLE_GRANT
+Procesando el tipo de objeto SCHEMA_EXPORT/DEFAULT_ROLE
+Procesando el tipo de objeto SCHEMA_EXPORT/TABLESPACE_QUOTA
+Procesando el tipo de objeto SCHEMA_EXPORT/PRE_SCHEMA/PROCACT_SCHEMA/LOGREP
+Procesando el tipo de objeto SCHEMA_EXPORT/SEQUENCE/SEQUENCE
+Procesando el tipo de objeto SCHEMA_EXPORT/TABLE/TABLE
+Procesando el tipo de objeto SCHEMA_EXPORT/TABLE/COMMENT
+Procesando el tipo de objeto SCHEMA_EXPORT/TABLE/INDEX/INDEX
+Procesando el tipo de objeto SCHEMA_EXPORT/TABLE/CONSTRAINT/CONSTRAINT
+Procesando el tipo de objeto SCHEMA_EXPORT/TABLE/CONSTRAINT/REF_CONSTRAINT
+Procesando el tipo de objeto SCHEMA_EXPORT/TABLE/TRIGGER
+. . "C##USUARIOPC1"."CATEGORIAS"                  7.1 KB       8 filas exportadas
+. . "C##USUARIOPC1"."PRODUCTOS"                   2.3 MB   20000 filas exportadas
+. . "C##USUARIOPC1"."PROVEEDORES"                13.1 KB      50 filas exportadas
+. . "C##USUARIOPC1"."TIENDAS"                     9.9 KB      30 filas exportadas
+. . "C##USUARIOPC1"."AUDITORIA_PRECIOS"          41.9 KB    1000 filas exportadas
+. . "C##USUARIOPC1"."CLIENTES"                   79.9 KB    1000 filas exportadas
+. . "C##USUARIOPC1"."DETALLE_VENTA"             189.3 KB    6584 filas exportadas
+. . "C##USUARIOPC1"."EMPLEADOS"                 630.4 KB   10000 filas exportadas
+. . "C##USUARIOPC1"."INVENTARIO_TIENDA"          39.3 KB    1000 filas exportadas
+. . "C##USUARIOPC1"."MOVIMIENTOS_INVENTARIO"     61.9 KB    1500 filas exportadas
+. . "C##USUARIOPC1"."VENTAS"                    502.3 KB   12043 filas exportadas
+La tabla maestra "C##USUARIOPC1"."SYS_EXPORT_SCHEMA_01" se ha cargado/descargado correctamente
+******************************************************************************
+El juego de archivos de volcado para C##USUARIOPC1.SYS_EXPORT_SCHEMA_01 es:
+  C:\BACKUP\BACKUP_ESQUEMA.DMP
+El trabajo "C##USUARIOPC1"."SYS_EXPORT_SCHEMA_01" ha terminado correctamente en Dom Sep 7 18:46:03 2025 elapsed 0 00:01:18

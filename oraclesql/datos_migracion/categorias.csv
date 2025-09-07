@@ -1,0 +1,9 @@
+id_categoria,nombre,descripcion,estado
+1,Electrodomésticos,Línea blanca y electrodomésticos,t
+2,Tecnología,"Computadoras, celulares, tablets",t
+3,Hogar,Muebles y decoración,t
+4,Deportes,Equipos deportivos y accesorios,t
+5,Ropa,Prendas de vestir,t
+6,Calzado,Zapatos y zapatillas,t
+7,Alimentos,Comestibles y bebidas,t
+8,Juguetes,Juguetes y entretenimiento,t

@@ -120,6 +120,25 @@ SELECT
     (1 + (random()*99)::int)
 FROM generate_series(1,1500) g;
 
+INSERT INTO inventario_tienda (id_tienda, id_producto, stock_actual, stock_reservado, ultima_actualizacion)
+SELECT
+    (i % 10) + 1,           -- asigna a tiendas 1 a 10
+    (i % 500) + 1,          -- asigna a productos 1 a 500
+    (random() * 100)::int,  -- stock actual entre 0 y 100
+    (random() * 50)::int,   -- stock reservado entre 0 y 50
+    now() - (random() * 30)::int * interval '1 day' -- fecha aleatoria últimos 30 días
+FROM generate_series(1, 1000) AS s(i);
+
+
+INSERT INTO auditoria_precios (id_producto, precio_anterior, precio_nuevo, fecha_cambio, id_empleado)
+SELECT
+    (i % 500) + 1,              
+    round((random() * 100 + 1)::numeric, 2),  -- precio anterior
+    round((random() * 200 + 10)::numeric, 2), -- precio nuevo
+    now() - (random() * 60)::int * interval '1 day', 
+    (i % 100) + 1               
+FROM generate_series(1, 1000) AS s(i);
+
 
 
 
