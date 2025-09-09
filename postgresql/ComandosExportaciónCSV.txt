@@ -1,0 +1,10 @@
+\COPY clientes TO 'C:\data\clientes.csv' DELIMITER ',' CSV HEADER;
+\COPY empleados TO 'C:\data\empleados.csv' DELIMITER ',' CSV HEADER;
+\COPY productos TO 'C:\data\productos.csv' DELIMITER ',' CSV HEADER;
+\COPY categorias TO 'C:\data\categorias.csv' DELIMITER ',' CSV HEADER;
+\COPY proveedores TO 'C:\data\proveedores.csv' DELIMITER ',' CSV HEADER;
+\COPY ventas TO 'C:\data\ventas.csv' DELIMITER ',' CSV HEADER;
+\COPY detalle_venta TO 'C:\data\detalle_venta.csv' DELIMITER ',' CSV HEADER;
+\COPY inventario_tienda TO 'C:\data\inventario_tienda.csv' DELIMITER ',' CSV HEADER;
+\COPY tiendas TO 'C:\data\tiendas.csv' DELIMITER ',' CSV HEADER;
+\COPY movimientos_inventario TO 'C:\data\movimientos_inventario.csv' DELIMITER ',' CSV HEADER;

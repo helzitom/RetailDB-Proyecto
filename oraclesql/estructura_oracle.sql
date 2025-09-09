@@ -1,4 +1,57 @@
--- 1️⃣ Crear secuencias para simular SERIAL
+
+CREATE USER C##migrador1 IDENTIFIED BY migrador
+DEFAULT TABLESPACE users
+TEMPORARY TABLESPACE temp
+QUOTA UNLIMITED ON users;
+
+GRANT 
+    CREATE SESSION,
+    CREATE TABLE,
+    CREATE VIEW,
+    CREATE SEQUENCE,
+    CREATE TRIGGER,
+    CREATE PROCEDURE,
+    CREATE SYNONYM
+TO C##migrador1;
+
+GRANT READ, WRITE ON DIRECTORY DATA_PUMP_DIR TO C##migrador1;
+
+
+-- COMANDOS PARA EXPORTAR EN PGADMIN4
+
+\COPY (
+    SELECT id_categoria, nombre, descripcion,
+           CASE WHEN estado = true THEN 1 ELSE 0 END AS estado
+    FROM categorias
+) TO 'C:\data\categorias.csv' DELIMITER ',' CSV HEADER;
+
+\COPY proveedores TO 'C:\data\proveedores.csv' DELIMITER ',' CSV HEADER;
+
+\COPY (
+    SELECT id_producto, nombre, descripcion, id_categoria, id_proveedor,
+           precio_compra, precio_venta, stock_minimo,
+           CASE WHEN estado = true THEN 1 ELSE 0 END AS estado
+    FROM productos
+) TO 'C:\data\productos.csv' DELIMITER ',' CSV HEADER;
+
+\COPY tiendas TO 'C:\data\tiendas.csv' DELIMITER ',' CSV HEADER;
+
+\COPY inventario_tienda TO 'C:\data\inventario_tienda.csv' DELIMITER ',' CSV HEADER;
+
+\COPY clientes TO 'C:\data\clientes.csv' DELIMITER ',' CSV HEADER;
+
+\COPY empleados TO 'C:\data\empleados.csv' DELIMITER ',' CSV HEADER;
+
+\COPY ventas TO 'C:\data\ventas.csv' DELIMITER ',' CSV HEADER;
+
+\COPY detalle_venta TO 'C:\data\detalle_venta.csv' DELIMITER ',' CSV HEADER;
+
+\COPY movimientos_inventario TO 'C:\data\movimientos_inventario.csv' DELIMITER ',' CSV HEADER;
+
+\COPY auditoria_precios TO 'C:\data\auditoria_precios.csv' DELIMITER ',' CSV HEADER;
+
+-- PEGAR ESO EN PGADMIN4
+
 CREATE SEQUENCE seq_categorias START WITH 1 INCREMENT BY 1;
 CREATE SEQUENCE seq_proveedores START WITH 1 INCREMENT BY 1;
 CREATE SEQUENCE seq_productos START WITH 1 INCREMENT BY 1;
